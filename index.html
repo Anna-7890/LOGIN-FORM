@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin-signup</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- box-icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="" class="signin-form">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <!-- <i class='bx bxs-user'></i> --><i class='bx bxs-user'></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="txt">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-google'></i></a>
+                </div>
+                <p class="account-txt">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" class="signup-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p class="txt">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-google'></i></a>
+                    
+                </div>
+                <p class="account-txt">ALready have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Member of Brand?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis debitis fugiat vero, cum laborum illo!</p>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+                </div>
+                <img src="img/undraw_appreciation_we8a.svg" alt="" class="img">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New to Brand?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis debitis fugiat vero, cum laborum illo!</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="img/undraw_learning_sketching_nd4f.svg" alt="" class="img">
+            </div>
+        </div>
+    </div>
+    <script>
+        const sign_in_btn = document.querySelector("#sign-in-btn");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+
+        const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+        const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+        const container = document.querySelector(".container");
+
+        sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+        });
+
+        sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+        });
+
+        sign_up_btn2.addEventListener("click", () => {
+        container.classList.add("sign-up-mode2");
+        });
+
+        sign_in_btn2.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode2");
+        });
+    </script>
+</body>
+</html>
